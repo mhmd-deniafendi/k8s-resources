@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: argo-application
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/mhmd-deniafendi/k8s-resources.git
+    targetRevision: HEAD
+    path: manifest
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: app
