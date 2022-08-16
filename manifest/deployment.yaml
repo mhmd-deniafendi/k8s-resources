@@ -7,7 +7,7 @@ spec:
   selector:
     matchLabels:
       app: pintu-app-deployment
-  replicas: 2    
+  replicas: 0
   template:
     metadata:
       labels:
