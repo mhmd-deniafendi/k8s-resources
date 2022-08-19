@@ -1,0 +1,14 @@
+apiVersion: extension/v1beta1
+kind: ingress
+metadata:
+  name: pintu-app-ingress
+  namespace: app
+spec:
+  rules:
+  - host: app.k8s
+    http:
+      paths:
+        - path: /
+          backend:
+            serviceName: pintu-app-service
+            servicePort: 8080
