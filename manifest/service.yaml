@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: pintu-app-service
+  name: labs-app-service
   namespace: app
 spec:
   type: ClusterIP
@@ -9,4 +9,4 @@ spec:
   - port: 8080
     targetPort: 8080
   selector:
-    app: pintu-app-service
+    app: labs-app-service

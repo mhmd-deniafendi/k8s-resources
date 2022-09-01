@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pintu-app-deployment
+  name: labs-app-deployment
   namespace: app
 spec:
   selector:
     matchLabels:
-      app: pintu-app-deployment
+      app: labs-app-deployment
   replicas: 1
   template:
     metadata:
       labels:
-        app: pintu-app-deployment
+        app: labs-app-deployment
     spec:
       containers:
-      - name: pintu-app-deployment
+      - name: labs-app-deployment
         image: 14022021/web-application:latest
         ports:
         - containerPort: 8080
